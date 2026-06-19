@@ -195,7 +195,7 @@ export default function HomePage() {
                 className="text-xs font-medium"
                 style={{ color: "rgba(255,255,255,0.8)" }}
               >
-                University of South-East Asia (USEA),Siem Reap, Cambodia
+                University of South-East Asia (USEA), Siem Reap, Cambodia
               </span>
             </div>
             <div className="overflow-hidden">
