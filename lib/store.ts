@@ -202,7 +202,7 @@ export const defaultActivities: Activity[] = [
 
 export const defaultContent: SiteContent = {
   heroTitle: "Your Career Starts Here",
-  heroSubtitle: "USEA Career Center connects talented Cambodians with top employers across Siem Reap and beyond. Find jobs, grow skills, and build your future.",
+  heroSubtitle: "USEA Career Center, in partnership with the USAID Digital Workforce Development, is established to connect HEIs and the local private sector for the creation of internship program and/or job opportunities for students and young professionals.",
   aboutText: "USEA Career Center is Siem Reap's leading employment and professional development hub. Founded to bridge the gap between local talent and employers, we offer job placement services, career counseling, skills training, and employer partnerships. Located in the heart of Siem Reap, we serve job seekers from all backgrounds and industries.",
   stats: [
     { label: "Jobs Posted", value: "500+" },

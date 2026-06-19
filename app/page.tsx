@@ -200,8 +200,8 @@ export default function HomePage() {
             </div>
             <div className="overflow-hidden">
               <motion.h1
-                initial={{ x: "-100%" }}
-                animate={{ x: "100%" }}
+                initial={{ x: "100%" }}
+                animate={{ x: "-100%" }}
                 transition={{
                   repeat: Infinity,
                   duration: 15,
