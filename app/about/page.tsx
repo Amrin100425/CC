@@ -132,26 +132,7 @@ export default function AboutPage() {
           <h3 className="font-bold text-xl mb-2" style={{ color: "#1A2744" }}>
             Find Us in Siem Reap
           </h3>
-          <div
-            className="map-container"
-            style={{
-              width: "100%",
-              height: "450px",
-              marginLeft: "160px",
-              textAlign: "center",
-            }}
-          >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4776.675251591038!2d103.861807775861!3d13.350500106456424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311017793e991fc3%3A0x106790c63625b714!2sUniversity%20of%20South-East%20Asia!5e1!3m2!1sen!2skh!4v1781852717580!5m2!1sen!2skh"
-              width="600"
-              height="450"
-              // style="border:0;"
-              // allowfullscreen=""
-              loading="lazy"
-              // referrerpolicy="no-referrer-when-downgrade"
-            />
-          </div>
-          <br />
+
           <p className="text-gray-500 mb-4">{content.address}</p>
 
           <p className="text-gray-500 text-sm">
