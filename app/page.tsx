@@ -1,5 +1,8 @@
+"use client";
 import Image from "next/image";
+import bg from "@/photos/Careercenter.jpg";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   Search,
   MapPin,
@@ -71,6 +74,98 @@ export default function HomePage() {
   return (
     <div>
       {/* HERO */}
+      <section>
+        <div />
+        <div />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+          <div className="max-w-3xl">
+            <motion.div
+              animate={{
+                opacity: [0, 1, 1, 0],
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+              }}
+              // className="w-full h-screen relative"
+            >
+              <Image
+                src={bg}
+                alt="Background"
+                fill
+                className="rounded-2xl mb-8 shadow-lg object-cover
+                object-center"
+              />
+            </motion.div>
+
+            {/* <div>
+              <MapPin size={13} style={{ color: "#28B4C8" }} />
+              <span
+                className="text-xs font-medium"
+                style={{ color: "rgba(255,255,255,0.8)" }}
+              >
+                Siem Reap, Cambodia
+              </span>
+            </div> */}
+
+            <div>
+              <div>
+                {/* <Search size={18} className="text-gray-400 shrink-0" /> */}
+                {/* <input
+                  type="text"
+                  placeholder="Job title, keyword or company..."
+                  className="w-full text-gray-700 text-sm outline-none bg-transparent placeholder-gray-400"
+                /> */}
+              </div>
+              {/* <div className="flex items-center gap-3 px-4 py-2 border-t sm:border-t-0 sm:border-l border-gray-200">
+                <MapPin size={18} className="text-gray-400 shrink-0" />
+                <input
+                  type="text"
+                  placeholder="Siem Reap"
+                  className="w-full text-gray-700 text-sm outline-none bg-transparent placeholder-gray-400"
+                />
+              </div> */}
+              {/* <Link
+                href="/jobs"
+                className="text-white px-6 py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 whitespace-nowrap"
+                style={{ background: "#D63B3B" }}
+              >
+                <Search size={16} /> Search Jobs
+              </Link>
+            </div>
+            <div className="flex flex-wrap gap-2 mt-5"> */}
+              {/* <span
+                className="text-xs"
+                style={{ color: "rgba(255,255,255,0.5)" }}
+              >
+                Popular: */}
+              {/* </span>
+              {[
+                "Hotel Manager",
+                "Tour Guide",
+                "IT Developer",
+                "Accountant",
+                "Teacher",
+              ].map((t) => (
+                <Link
+                  key={t}
+                  href={`/jobs?q=${t}`}
+                  className="text-xs rounded-full px-3 py-1 transition"
+                  style={{
+                    color: "rgba(255,255,255,0.7)",
+                    background: "rgba(255,255,255,0.1)",
+                    border: "1px solid rgba(255,255,255,0.2)",
+                  }}
+                >
+                  {t}
+                </Link> */}
+              {/* ))} */}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* STATS */}
       <section
         className="relative overflow-hidden"
         style={{
@@ -103,51 +198,36 @@ export default function HomePage() {
                 Siem Reap, Cambodia
               </span>
             </div>
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-white font-bold leading-tight mb-6">
-              <span style={{ color: "#E8A020" }}>Your</span>{" "}
-              <span style={{ color: "#1900ff" }}>Career</span>{" "}
-              <span style={{ color: "#ff0000" }}>Starts</span>{" "}
-              <span style={{ color: "#28B4C8" }}>Here</span>
-            </h1>
+            <div className="overflow-hidden">
+              <motion.h1
+                initial={{ x: "-100%" }}
+                animate={{ x: "100%" }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 15,
+                  ease: "linear",
+                }}
+                className="text-6xl font-bold text-white whitespace-nowrap"
+              >
+                {/* <span style={{ color: "#ffffff" }}>Your</span>{" "}
+                <span style={{ color: "#ffffff" }}>Career</span>{" "}
+                <span style={{ color: "#ffffff" }}>Starts</span>{" "}
+                <span style={{ color: "#ffffff" }}>Here</span> */}
+                Your Career Starts Here
+              </motion.h1>
+            </div>
             <p
               className="text-lg leading-relaxed mb-10 max-w-2xl"
               style={{ color: "rgba(255,255,255,0.7)" }}
             >
               {content.heroSubtitle}
             </p>
-            <div className="bg-white rounded-2xl p-2 flex flex-col sm:flex-row gap-2 shadow-2xl max-w-2xl">
-              <div className="flex items-center gap-3 flex-1 px-4 py-2">
-                <Search size={18} className="text-gray-400 shrink-0" />
-                <input
-                  type="text"
-                  placeholder="Job title, keyword or company..."
-                  className="w-full text-gray-700 text-sm outline-none bg-transparent placeholder-gray-400"
-                />
-              </div>
-              <div className="flex items-center gap-3 px-4 py-2 border-t sm:border-t-0 sm:border-l border-gray-200">
-                <MapPin size={18} className="text-gray-400 shrink-0" />
-                <input
-                  type="text"
-                  placeholder="Siem Reap"
-                  className="w-full text-gray-700 text-sm outline-none bg-transparent placeholder-gray-400"
-                />
-              </div>
-              <Link
-                href="/jobs"
-                className="text-white px-6 py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 whitespace-nowrap"
-                style={{ background: "#D63B3B" }}
-              >
-                <Search size={16} /> Search Jobs
-              </Link>
+            <div>
+              <div></div>
+              {/* <div className="flex items-center gap-3 px-4 py-2 border-t sm:border-t-0 sm:border-l border-gray-200"></div> */}
             </div>
             <div className="flex flex-wrap gap-2 mt-5">
-              <span
-                className="text-xs"
-                style={{ color: "rgba(255,255,255,0.5)" }}
-              >
-                Popular:
-              </span>
-              {[
+              {/* {[
                 "Hotel Manager",
                 "Tour Guide",
                 "IT Developer",
@@ -165,77 +245,13 @@ export default function HomePage() {
                   }}
                 >
                   {t}
-                </Link>
-              ))}
+                </Link> */}
             </div>
           </div>
         </div>
       </section>
 
-      {/* STATS */}
-      <section className="bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-gray-100">
-            {content.stats.map((s, i) => (
-              <div key={i} className="py-8 px-6 text-center">
-                <p
-                  className="font-display text-3xl font-bold"
-                  style={{ color: "#1A2744" }}
-                >
-                  {s.value}
-                </p>
-                <p className="text-gray-500 text-sm mt-1">{s.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CATEGORIES */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="flex items-end justify-between mb-10">
-          <div>
-            <p
-              className="text-sm font-semibold uppercase tracking-wider mb-2"
-              style={{ color: "#D63B3B" }}
-            >
-              Explore by Industry
-            </p>
-            <h2
-              className="font-display text-3xl font-bold"
-              style={{ color: "#1A2744" }}
-            >
-              Browse Job Categories
-            </h2>
-          </div>
-          <Link
-            href="/jobs"
-            className="hidden sm:flex items-center gap-1 text-sm font-medium transition"
-            style={{ color: "#1A2744" }}
-          >
-            All Jobs <ArrowRight size={16} />
-          </Link>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {categories.map((cat) => (
-            <Link
-              key={cat.name}
-              href={`/jobs?category=${cat.name}`}
-              className="rounded-xl p-4 transition-all duration-200 cursor-pointer"
-              style={{ background: cat.bg, border: `1px solid ${cat.border}` }}
-            >
-              <div className="text-3xl mb-3">{cat.icon}</div>
-              <h3
-                className="font-semibold text-sm"
-                style={{ color: "#1A2744" }}
-              >
-                {cat.name}
-              </h3>
-              <p className="text-gray-500 text-xs mt-1">{cat.count} openings</p>
-            </Link>
-          ))}
-        </div>
-      </section>
 
       {/* FEATURED JOBS */}
       <section className="py-16" style={{ background: "#F0EDE8" }}>

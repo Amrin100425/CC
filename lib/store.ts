@@ -211,6 +211,6 @@ export const defaultContent: SiteContent = {
     { label: "Training Programs", value: "30+" },
   ],
   contactEmail: "info@useacareercenter.edu.kh",
-  contactPhone: "+855 63 123 456",
-  address: "Street 60, Sala Kamroeuk, Siem Reap, Cambodia",
+  contactPhone: "+855 16 736 214" + ", " + "+855 67 536 769",
+  address: "7 Makara St, Sala Kamroeuk, Siem Reap, Cambodia",
 };

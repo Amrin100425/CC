@@ -207,7 +207,15 @@ export default function ActivitiesPage() {
                         "Fully Booked"
                       ) : (
                         <>
-                          <span>Register Now</span>
+                          <span>
+                            <a
+                              href={
+                                "https://www.facebook.com/share/18sM5Fdzm2/?mibextid=wwXIfr"
+                              }
+                            >
+                              Register Now
+                            </a>
+                          </span>
                           <ChevronRight size={15} />
                         </>
                       )}

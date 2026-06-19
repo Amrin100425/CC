@@ -122,7 +122,13 @@ export default function ActivityDetailPage({
               }}
             >
               <h3 className="text-white font-bold text-lg mb-1">
-                Register Now
+                <a
+                  href="https://www.facebook.com/share/18sM5Fdzm2/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Register Now
+                </a>
               </h3>
               <p className="text-gray-400 text-sm mb-5">
                 Secure your spot before it fills up.
