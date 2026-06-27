@@ -281,8 +281,13 @@ export default function HomePage() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {featuredPhotos.map(ph => (
-              <div key={ph.id} className="bg-white rounded-2xl p-6 border border-gray-100 group transition-all duration-300 flex items-start gap-4"
-                style={{ boxShadow: "0 4px 24px rgba(26,39,68,0.10)" }} >
+              <motion.div
+                key={ph.id}
+                whileHover={{ scale: 1.03 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="bg-white rounded-2xl p-6 border border-gray-100 flex items-start gap-4 cursor-pointer"
+                style={{ boxShadow: "0 4px 24px rgba(26,39,68,0.10)" }}
+              >
                 <Image
                   src={ph.heroImg}
                   alt="USEA Career Center"
@@ -294,8 +299,7 @@ export default function HomePage() {
                   <p className="text-sm font-semibold uppercase tracking-wider mb-2">{ph.heroSubtitle}</p>
                   <p className="text-gray-600 text-sm leading-relaxed">{ph.articles}</p>
                 </div>
-              </div>
-
+              </motion.div>
             ))}
           </div>
           <div className="text-center mt-8">
