@@ -11,11 +11,12 @@ import {
   ChevronRight,
   Users,
 } from "lucide-react";
-import { defaultJobs, defaultActivities, defaultContent } from "@/lib/store";
+import { defaultJobs, defaultActivities, defaultContent, defaultPhotos } from "@/lib/store";
 
 export default function HomePage() {
   const featuredJobs = defaultJobs.filter((j) => j.featured);
   const featuredActivities = defaultActivities.filter((a) => a.featured);
+  const featuredPhotos = defaultPhotos.filter((p) => p.featured);
   const content = defaultContent;
 
   const categories = [
@@ -78,26 +79,25 @@ export default function HomePage() {
         <div />
         <div />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-          <div className="max-w-3xl">
-            <motion.div
-              animate={{
-                opacity: [0, 1, 1, 0],
-              }}
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-              }}
-              // className="w-full h-screen relative"
-            >
-              <Image
-                src={bg}
-                alt="Background"
-                fill
-                className="rounded-2xl mb-8 shadow-lg object-cover
-                object-center"
-              />
-            </motion.div>
-
+          <div className="max-w-3xl ">
+            <div className="absolute inset-0 overflow-hidden">
+              <motion.div
+                animate={{
+                  x: ["100%", "-100%"],
+                }}
+                transition={{
+                  duration: 15,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                className="absolute inset-0 flex"
+              >
+                {/* Image 1 */}
+                <div className="relative min-w-full h-full">
+                  <Image src={bg} alt="" fill className="object-cover" />
+                </div>
+              </motion.div>
+            </div>
             {/* <div>
               <MapPin size={13} style={{ color: "#28B4C8" }} />
               <span
@@ -204,7 +204,7 @@ export default function HomePage() {
                 animate={{ x: "-100%" }}
                 transition={{
                   repeat: Infinity,
-                  duration: 15,
+                  duration: 5,
                   ease: "linear",
                 }}
                 className="text-6xl font-bold text-white whitespace-nowrap"
@@ -268,7 +268,7 @@ export default function HomePage() {
                 className="font-display text-3xl font-bold"
                 style={{ color: "#1A2744" }}
               >
-                Featured Jobs
+                CAREER CENTER
               </h2>
             </div>
             <Link
@@ -280,67 +280,22 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
-            {featuredJobs.map((job) => (
-              <div
-                key={job.id}
-                className="bg-white rounded-2xl p-6 border border-gray-100 group transition-all duration-300"
-                style={{ boxShadow: "0 4px 24px rgba(26,39,68,0.10)" }}
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center text-2xl">
-                      {job.logo}
-                    </div>
-                    <div>
-                      <h3 className="font-bold" style={{ color: "#1A2744" }}>
-                        {job.title}
-                      </h3>
-                      <p className="text-gray-500 text-sm">{job.company}</p>
-                    </div>
-                  </div>
-                  <span
-                    className="text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1"
-                    style={{
-                      background: "rgba(232,160,32,0.1)",
-                      color: "#92620A",
-                    }}
-                  >
-                    <Star size={11} fill="currentColor" /> Featured
-                  </span>
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">
-                  {job.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span
-                    className="text-xs px-3 py-1 rounded-full"
-                    style={{ background: "#EFF6FF", color: "#1D4ED8" }}
-                  >
-                    {job.type}
-                  </span>
-                  <span className="text-xs px-3 py-1 rounded-full flex items-center gap-1 bg-gray-100 text-gray-600">
-                    <MapPin size={11} /> {job.location}
-                  </span>
-                  <span
-                    className="text-xs px-3 py-1 rounded-full"
-                    style={{ background: "#F0FDF4", color: "#15803D" }}
-                  >
-                    {job.salary}
-                  </span>
-                </div>
-                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                  <span className="text-xs text-gray-400">
-                    Deadline: {job.deadline}
-                  </span>
-                  <Link
-                    href={`/jobs/${job.id}`}
-                    className="flex items-center gap-1 text-sm font-semibold"
-                    style={{ color: "#D63B3B" }}
-                  >
-                    Apply Now <ChevronRight size={16} />
-                  </Link>
+            {featuredPhotos.map(ph => (
+              <div key={ph.id} className="bg-white rounded-2xl p-6 border border-gray-100 group transition-all duration-300 flex items-start gap-4"
+                style={{ boxShadow: "0 4px 24px rgba(26,39,68,0.10)" }} >
+                <Image
+                  src={ph.heroImg}
+                  alt="USEA Career Center"
+                  width={250}
+                  height={210}
+                  className="rounded-lg flex-shrink-0"
+                />
+                <div className="flex-1">
+                  <p className="text-sm font-semibold uppercase tracking-wider mb-2">{ph.heroSubtitle}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{ph.articles}</p>
                 </div>
               </div>
+
             ))}
           </div>
           <div className="text-center mt-8">

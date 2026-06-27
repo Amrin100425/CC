@@ -55,13 +55,6 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center gap-3">
             <Link
-              href="/jobs"
-              className="text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 shadow-md"
-              style={{ background: "#D63B3B" }}
-            >
-              Find a Job
-            </Link>
-            <Link
               href="/admin"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >

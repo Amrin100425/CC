@@ -39,6 +39,33 @@ export type SiteContent = {
   address: string;
 };
 
+export type SitePhotos = {
+  id: string;
+  heroImg: string;
+  heroSubtitle: string;
+  address: string;
+  articles: string;
+  featured: boolean;
+}
+
+export const defaultPhotos: SitePhotos[] = [
+  {
+    id: "1",
+    heroImg: "/photos/Discuss.jpg",
+    heroSubtitle: "Job Discussion",
+    address: "Siem Reap, Cambodia",
+    articles: "Many students has come to visit USEA Career Center to find the best jobs for them. We provided them with CV templates and job descriptions. I hope that they will find the best jobs for them.",
+    featured: true,
+  },
+  {
+    id: "2",
+    heroImg: "/photos/DDD.jpg",
+    heroSubtitle: "Job Discussion",
+    address: "Siem Reap, Cambodia",
+    articles: "Many students has come to visit USEA Career Center to find the best jobs for them. We provided them with CV templates and job descriptions. I hope that they will find the best jobs for them.",
+    featured: true,
+  },
+];
 export const defaultJobs: Job[] = [
   {
     id: "1",

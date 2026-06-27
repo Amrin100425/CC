@@ -208,13 +208,7 @@ export default function ActivitiesPage() {
                       ) : (
                         <>
                           <span>
-                            <a
-                              href={
-                                "https://www.facebook.com/share/18sM5Fdzm2/?mibextid=wwXIfr"
-                              }
-                            >
-                              Register Now
-                            </a>
+                            <a>Register Now</a>
                           </span>
                           <ChevronRight size={15} />
                         </>
