@@ -60,9 +60,9 @@ export const defaultPhotos: SitePhotos[] = [
   {
     id: "2",
     heroImg: "/photos/DDD.jpg",
-    heroSubtitle: "Job Discussion",
+    heroSubtitle: "DDD Event",
     address: "Siem Reap, Cambodia",
-    articles: "Many students has come to visit USEA Career Center to find the best jobs for them. We provided them with CV templates and job descriptions. I hope that they will find the best jobs for them.",
+    articles: "DDD Interview Event organized by USEA Career Center.",
     featured: true,
   },
 ];

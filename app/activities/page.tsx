@@ -82,15 +82,15 @@ export default function ActivitiesPage() {
               style={
                 selectedType === type
                   ? {
-                      background: "#1A2744",
-                      color: "#fff",
-                      boxShadow: "0 2px 8px rgba(26,39,68,0.3)",
-                    }
+                    background: "#1A2744",
+                    color: "#fff",
+                    boxShadow: "0 2px 8px rgba(26,39,68,0.3)",
+                  }
                   : {
-                      background: "#fff",
-                      color: "#6B7280",
-                      border: "1px solid #E5E7EB",
-                    }
+                    background: "#fff",
+                    color: "#6B7280",
+                    border: "1px solid #E5E7EB",
+                  }
               }
             >
               {type}
@@ -196,10 +196,10 @@ export default function ActivitiesPage() {
                       style={
                         spotsLeft <= 0
                           ? {
-                              background: "#F3F4F6",
-                              color: "#9CA3AF",
-                              pointerEvents: "none",
-                            }
+                            background: "#F3F4F6",
+                            color: "#9CA3AF",
+                            pointerEvents: "none",
+                          }
                           : { background: "#1A2744", color: "#fff" }
                       }
                     >
